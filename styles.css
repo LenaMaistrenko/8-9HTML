@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+/* ----------------------------------------------------------------- TASK 1 --------------------------------------------------------------------------------- */
+.section-wrapper {
+  overflow: auto;
+  padding: 30px;
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #3424c0;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 100px;
+}
+
+thead th:first-child {
+  z-index: 4;
+}
+
+tbody td {
+  border: 1px solid #ddd;
+  padding: 150px 150px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td:first-child {
+  background-color: #3424c0;
+  color: white;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+/* -----------------------------------------------------TASK 2---------------------------------------------------------------------------------- */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  overflow-x: hidden;
+  transition: width 1s;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+.sidebar p {
+  padding-left: 10px;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  /* border-bottom: 1px solid #ccc; */
+  transition: background-color 0.3s;
+}
+
+.menu-item img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+.sidebar ul li span {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li:hover {
+  background-color: #575757;
+}
+
+.content {
+  margin-left: 60px;
+  padding: 20px;
+  transition: margin-left 1s;
+}
+
+.sidebar:hover + .content {
+  margin-left: 250px;
+}
+
+/* ----------------------------------------------------------------------- TASK 3-------------------------------------------------- */
+.plan-container {
+  margin: 150px 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.plan {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  padding-bottom: 20px;
+  text-align: center;
+  width: 200px;
+  transition: transform 1s, box-shadow 1s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  
+}
+.enterprise {
+  border-bottom: 4px solid red;
+}
+.professional {
+  border-bottom: 4px solid yellow;
+}
+.standard {
+  border-bottom: 4px solid blue;
+}
+.basic {
+  border-bottom: 4px solid greenyellow;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.plan p {
+  margin: 10px 0;
+}
+
+.plan button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  /* background-color: #007bff; */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button-enterprise {
+  background-color: red;
+}
+
+.button-prof {
+  background-color: yellow;
+}
+
+.button-standard {
+  background-color: blue;
+}
+
+.button-basic {
+    background-color: greenyellow;
+}
+.plan:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-gray {
+  color: #575757;
+}
